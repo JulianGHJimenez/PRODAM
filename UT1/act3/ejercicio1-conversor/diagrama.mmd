@@ -7,16 +7,16 @@ flowchart TD
     B --> C[/Leer opción/]
     C --> D[/Leer valor/]
 
-    D --> E{¿Opción == 1?}
+    D --> E{¿Opción = 1?}
 
     E -- Sí --> F["kmAMetros(valor)"]
-    E -- No --> G{¿Opción == 2?}
+    E -- No --> G{¿Opción = 2?}
 
     G -- Sí --> H["metrosACentimetros(valor)"]
-    G -- No --> I{¿Opción == 3?}
+    G -- No --> I{¿Opción = 3?}
 
     I -- Sí --> J["horasAMinutos(valor)"]
-    I -- No --> K{¿Opción == 4?}
+    I -- No --> K{¿Opción = 4?}
 
     K -- Sí --> L["celsiusAFahrenheit(valor)"]
     K -- No --> M[/Mostrar "Opción no válida"/]
