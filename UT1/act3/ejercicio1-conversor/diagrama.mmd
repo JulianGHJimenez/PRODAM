@@ -2,3 +2,29 @@ flowchart TD
     %% Construye aquí tu diagrama completo.
     %% Debe incluir inicio, fin, entradas/salidas, decisiones,
     %% llamadas a las cuatro funciones y flechas de flujo.
+
+  A([INICIO]) --> B[/Mostrar menú/]
+    B --> C[/Leer opción/]
+    C --> D[/Leer valor/]
+
+    D --> E{¿Opción == 1?}
+
+    E -- Sí --> F[kmAMetros(valor)]
+    E -- No --> G{¿Opción == 2?}
+
+    G -- Sí --> H[metrosACentimetros(valor)]
+    G -- No --> I{¿Opción == 3?}
+
+    I -- Sí --> J[horasAMinutos(valor)]
+    I -- No --> K{¿Opción == 4?}
+
+    K -- Sí --> L[celsiusAFahrenheit(valor)]
+    K -- No --> M[/Mostrar "Opción no válida"/]
+
+    F --> N[/Mostrar resultado/]
+    H --> N
+    J --> N
+    L --> N
+
+    N --> O([FIN])
+    M --> O
