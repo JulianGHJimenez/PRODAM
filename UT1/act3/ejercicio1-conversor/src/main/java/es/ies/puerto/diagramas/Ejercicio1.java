@@ -53,17 +53,16 @@ public class Ejercicio1 {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
         double resultado = 0;
-        while (opcion < 6) {
+        while (opcion < 5) {
             System.out.println("=== MENU ===");
             System.out.println("1. Km ---> Metros");
             System.out.println("2. Metros ---> Centimetros");
             System.out.println("3. Horas ---> Minutos");
-            System.out.println("4. Fahrenheit ---> Celcius");
-            System.out.println("5. Finalizar");
-            System.out.println("ELija una opcion");
+            System.out.println("4. Celsius ---> Fahrenheit");
+            System.out.println("Elija una opcion");
             opcion = scanner.nextInt();
 
-            if (opcion < 0 || opcion > 5) {
+            if (opcion < 0 || opcion > 4) {
                 System.out.println("Opción no valida");
             }
 
@@ -96,9 +95,6 @@ public class Ejercicio1 {
 
                 resultado = celsiusAFahrenheit(valor);
                 System.out.println(+resultado+" fahrenheit");
-            }
-            if (opcion == 5) {
-                return;
             }
             return ;
 
